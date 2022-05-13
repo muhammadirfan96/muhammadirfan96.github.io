@@ -1,3 +1,5 @@
+import Contact from "./components/Contact";
+import Gallery from "./components/Gallery";
 import HasilKarya from "./components/HasilKarya";
 import Header from "./components/Header";
 import Heroku from "./components/Heroku";
@@ -16,8 +18,14 @@ function App() {
         <div className="bg-slate-50 p-3">
           <HasilKarya />
         </div>
-        <div className="grid justify-items-center gap-4 mt-4">
+        <div className="mt-4">
           <Technology />
+        </div>
+        <div className="mt-4">
+          <Gallery />
+        </div>
+        <div className="bg-slate-50 p-3 mt-4">
+          <Contact />
         </div>
       </div>
     </>

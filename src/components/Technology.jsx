@@ -5,36 +5,37 @@ const Technology = () => {
   return (
     <>
         <p className='text-center text-3xl capitalize mb-2 font-vibes'>technology</p>
-        <div className='flex gap-10 border-2'>
-          <div className='text-[50px] sm:text-[70px] text-ci'>
+        <div className='flex justify-center grid-cols-4 gap-2'>
+          <div className='text-[35px] p-2 border-gray-200 shadow-lg rounded-lg shadow- sm:text-[45px] md:text-[65px] lg:text-[75px] text-ci'>
             <CodeIgniter />
           </div>
 
-          <div className='text-[50px] sm:text-[70px] text-mysql'>
+          <div className='text-[35px] p-2 border-gray-200 shadow-lg rounded-lg shadow- sm:text-[45px] md:text-[65px] lg:text-[75px] text-mysql'>
             <Mysql />
           </div>
 
-          <div className='text-[50px] sm:text-[70px] text-bs'>
+          <div className='text-[35px] p-2 border-gray-200 shadow-lg rounded-lg shadow- sm:text-[45px] md:text-[65px] lg:text-[75px] text-bs'>
             <Bootsrtap />
           </div>
 
-          <div className='text-[50px] sm:text-[70px] text-mongodb'>
+          <div className='text-[35px] p-2 border-gray-200 shadow-lg rounded-lg shadow- sm:text-[45px] md:text-[65px] lg:text-[75px] text-mongodb'>
             <Mongodb />
           </div>
-
-          <div className='text-[50px] sm:text-[70px] text-black'>
+        </div>
+        <div className='flex justify-center grid-cols-4 gap-2'>
+          <div className='text-[35px] p-2 border-gray-200 shadow-lg rounded-lg shadow- sm:text-[45px] md:text-[65px] lg:text-[75px] text-black'>
             <Expressjs />
           </div>
 
-          <div className='text-[50px] sm:text-[70px] text-reactjs'>
+          <div className='text-[35px] p-2 border-gray-200 shadow-lg rounded-lg shadow- sm:text-[45px] md:text-[65px] lg:text-[75px] text-reactjs'>
             <Reactjs />
           </div>
 
-          <div className='text-[50px] sm:text-[70px] text-nodejs'>
+          <div className='text-[35px] p-2 border-gray-200 shadow-lg rounded-lg shadow- sm:text-[45px] md:text-[65px] lg:text-[75px] text-nodejs'>
             <Nodejs />
           </div>
 
-          <div className='text-[50px] sm:text-[70px] text-tailwind'>
+          <div className='text-[35px] p-2 border-gray-200 shadow-lg rounded-lg sm:text-[45px] md:text-[65px] lg:text-[75px] text-tailwind'>
             <Tailwindcss />
           </div>
         </div>

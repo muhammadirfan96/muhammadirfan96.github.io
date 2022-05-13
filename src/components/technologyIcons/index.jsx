@@ -1,7 +1,6 @@
 import React from 'react'
 import {FaNodeJs, FaBootstrap} from 'react-icons/fa'
 import {SiTailwindcss, SiReact, SiCodeigniter, SiMysql, SiMongodb, SiExpress} from 'react-icons/si'
-import {AiFillFilePdf} from 'react-icons/ai'
 
 export const Tailwindcss = () => {
   return (

@@ -1,0 +1,21 @@
+akun mongodb atlas
+username: Irfan
+pass: Irfan313
+
+######################################################################################################################
+
+mongodb atlas pakai cli (cmd bawaan)
+mongo "mongodb+srv://cluster0.ayekd.mongodb.net/myFirstDatabase" --username Irfan
+
+// mongosh "mongodb+srv://cluster0.ayekd.mongodb.net/myFirstDatabase" --apiVersion 1 --username Irfan
+
+mongodb atlas pakai compass
+mongodb+srv://Irfan:Irfan313@cluster0.ayekd.mongodb.net/test
+
+######################################################################################################################
+
+mongodb lokal pakai cli
+mongo
+
+mongodb lokal pakai compass
+mongodb://localhost:27017
