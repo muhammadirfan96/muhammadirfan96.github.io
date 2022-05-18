@@ -4,14 +4,14 @@ const Gallery = () => {
   return (
     <>
         <p className='text-center text-3xl capitalize mb-2 font-vibes'>gallery</p>
-        <div className='grid justify-items-center sm:grid-cols-3 gap-2'>
-            <div className='border-2 border-green-500 rounded-lg aspect-video w-[95%]'>
+        <div className='flex flex-col sm:flex-row sm:flex-wrap justify-center gap-2 px-2'>
+            <div className='bg-green-100 border-2 border-green-500 rounded-lg aspect-video sm:w-[48%] md:w-[33%] lg:w-[24%]'>
                 <img src='' alt='img' />
             </div>
-            <div className='border-2 border-green-500 rounded-lg aspect-video w-[95%]'>
+            <div className='bg-green-100 border-2 border-green-500 rounded-lg aspect-video sm:w-[48%] md:w-[33%] lg:w-[24%]'>
                 <img src='' alt='img' />
             </div>
-            <div className='border-2 border-green-500 rounded-lg aspect-video w-[95%]'>
+            <div className='bg-green-100 border-2 border-green-500 rounded-lg aspect-video sm:w-[48%] md:w-[33%] lg:w-[24%]'>
                 <img src='' alt='img' />
             </div>
         </div>

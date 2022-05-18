@@ -18,21 +18,21 @@ const Contact = () => {
             </div>
             <div className='p-4 w-full'>
                 <p className='border-b-2 border-green-500 mb-3'>social media</p>
-                <div className='flex gap-2 mb-2'>
-                    <FaWhatsappSquare className='text-green-400 text-4xl' />
-                    <p className='self-end hover:text-lg'>082302173682</p>
+                <div className='flex gap-2 mb-2 group h-10'>
+                    <FaWhatsappSquare className='text-green-400 text-4xl group-hover:text-3xl transition-all' />
+                    <p className='self-end group-hover:text-lg transition-all'>082302173682</p>
                 </div>
-                <div className='flex gap-2 mb-2'>
-                    <FaInstagramSquare className='text-red-500 text-4xl' />
-                    <p className='self-end hover:text-lg'>muhammadirfan121314</p>
+                <div className='flex gap-2 mb-2 group h-10'>
+                    <FaInstagramSquare className='text-red-500 text-4xl group-hover:text-3xl transition-all' />
+                    <p className='self-end group-hover:text-lg transition-all'>muhammadirfan121314</p>
                 </div>
-                <div className='flex gap-2 mb-2'>
-                    <FaFacebookSquare className='text-blue-700 text-4xl' />
-                    <p className='self-end hover:text-lg'>Muhammad Irfan</p>
+                <div className='flex gap-2 mb-2 group h-10'>
+                    <FaFacebookSquare className='text-blue-700 text-4xl group-hover:text-3xl transition-all' />
+                    <p className='self-end group-hover:text-lg transition-all'>Muhammad Irfan</p>
                 </div>
-                <div className='flex gap-2 mb-2'>
-                    <FaTwitterSquare className='text-sky-400 text-4xl' />
-                    <p className='self-end hover:text-lg'>@irfan28063856</p>
+                <div className='flex gap-2 mb-2 group h-10'>
+                    <FaTwitterSquare className='text-sky-400 text-4xl group-hover:text-3xl transition-all' />
+                    <p className='self-end group-hover:text-lg transition-all'>@irfan28063856</p>
                 </div>
             </div>
         </div>
