@@ -1,4 +1,3 @@
-import React from 'react'
 import {FaWhatsappSquare, FaFacebookSquare, FaInstagramSquare, FaTwitterSquare} from 'react-icons/fa'
 
 const Contact = () => {
@@ -18,22 +17,22 @@ const Contact = () => {
             </div>
             <div className='p-4 w-full'>
                 <p className='border-b-2 border-green-500 mb-3'>social media</p>
-                <div className='flex gap-2 mb-2 group h-10'>
-                    <FaWhatsappSquare className='text-green-400 text-4xl group-hover:text-3xl transition-all' />
-                    <p className='self-end group-hover:text-lg transition-all'>082302173682</p>
-                </div>
-                <div className='flex gap-2 mb-2 group h-10'>
-                    <FaInstagramSquare className='text-red-500 text-4xl group-hover:text-3xl transition-all' />
-                    <p className='self-end group-hover:text-lg transition-all'>muhammadirfan121314</p>
-                </div>
-                <div className='flex gap-2 mb-2 group h-10'>
-                    <FaFacebookSquare className='text-blue-700 text-4xl group-hover:text-3xl transition-all' />
-                    <p className='self-end group-hover:text-lg transition-all'>Muhammad Irfan</p>
-                </div>
-                <div className='flex gap-2 mb-2 group h-10'>
-                    <FaTwitterSquare className='text-sky-400 text-4xl group-hover:text-3xl transition-all' />
-                    <p className='self-end group-hover:text-lg transition-all'>@irfan28063856</p>
-                </div>
+                <a className='flex group w-56 h-10 overflow-hidden'>
+                    <FaWhatsappSquare className='text-green-400 text-4xl group-hover:text-[33px] transition-all inline' />
+                    <p className='ml-2 self-center group-hover:text-lg transition-all inline'>082302173682</p>
+                </a>
+                <a className='flex group w-56 h-10 overflow-hidden'>
+                    <FaInstagramSquare className='text-red-500 text-4xl group-hover:text-[33px] transition-all inline' />
+                    <p className='ml-2 self-center group-hover:text-lg transition-all inline'>muhammadirfan121314</p>
+                </a>
+                <a className='flex group w-56 h-10'>
+                    <FaFacebookSquare className='text-blue-700 text-4xl group-hover:text-[33px] transition-all inline' />
+                    <p className='ml-2 self-center group-hover:text-lg transition-all inline'>Muhammad Irfan</p>
+                </a>
+                <a className='flex group w-56 h-10'>
+                    <FaTwitterSquare className='text-sky-400 text-4xl group-hover:text-[33px] transition-all inline' />
+                    <p className='ml-2 self-center group-hover:text-lg transition-all inline'>@irfan28063856</p>
+                </a>
             </div>
         </div>
     </>

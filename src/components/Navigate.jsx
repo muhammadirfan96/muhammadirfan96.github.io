@@ -12,32 +12,32 @@ const Navigate = () => {
 
   return (
     <>
-        <button onClick={setnavMobile} className='absolute right-0 -top-6 bg-green-500 px-3 rounded-tl-lg'>
-            <span id='first' className='text-white font-extrabold inline-block rotate-45 mr-1 transition delay-500'>|</span>
-            <span id='second' className='font-extrabold inline-block -rotate-45 ml-1 transition delay-500'>|</span>
+        <button onClick={setnavMobile} className='absolute right-0 -top-[28px] bg-green-500 pt-1 px-3 rounded-tl-lg'>
+            <span id='first' className='border-2 border-white bg-white font-extrabold inline-block rotate-45 mr-[2px] transition delay-500 h-4'></span>
+            <span id='second' className='border-2 border-black bg-black font-extrabold inline-block -rotate-45 ml-[2px] transition delay-500 h-4'></span>
         </button>
         <div id='navMobile' className='grid grid-cols-4 gap-2 p-2 h-14 transition-all'>
-            <div className='bg-slate-200 rounded-md p-1 '>
+            <div className='bg-green-50 rounded-md p-1 '>
                 <FcHome className='text-lg mx-auto' />
                 <p className='text-center text-xs'>home</p>
             </div>
-            <div className='bg-slate-200 rounded-md p-1 '>
+            <div className='bg-green-50 rounded-md p-1 '>
                 <FcPositiveDynamic className='text-lg mx-auto' />
                 <p className='text-center text-xs'>karya</p>
             </div>
-            <div className='bg-slate-200 rounded-md p-1 '>
+            <div className='bg-green-50 rounded-md p-1 '>
                 <FcServices className='text-lg mx-auto' />
                 <p className='text-center text-xs'>technology</p>
             </div>
-            <div className='bg-slate-200 rounded-md p-1 '>
+            <div className='bg-green-50 rounded-md p-1 '>
                 <FcGallery className='text-lg mx-auto' />
                 <p className='text-center text-xs'>gallery</p>
             </div>
-            <div className='bg-slate-200 rounded-md p-1 '>
+            <div className='bg-green-50 rounded-md p-1 '>
                 <FcSms className='text-lg mx-auto' />
                 <p className='text-center text-xs'>contact</p>
             </div>
-            <div className='bg-slate-200 rounded-md p-1 '>
+            <div className='bg-green-50 rounded-md p-1 '>
                 <FcBusinessman className='text-lg mx-auto' />
                 <p className='text-center text-xs'>client</p>
             </div>

@@ -1,4 +1,3 @@
-import React from 'react'
 import irf from '../img/irf.jpg'
 
 const Client = () => {

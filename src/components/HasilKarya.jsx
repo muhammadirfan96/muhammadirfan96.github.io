@@ -1,4 +1,3 @@
-import React from 'react'
 import simokit from '../img/hasil-karya/simokit.jpeg'
 import webpunagaya from '../img/hasil-karya/webpunagaya.jpeg'
 

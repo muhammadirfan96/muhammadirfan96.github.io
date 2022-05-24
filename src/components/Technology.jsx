@@ -1,4 +1,3 @@
-import React from 'react'
 import {CodeIgniter, Reactjs, Tailwindcss, Mongodb, Mysql, Expressjs, Bootsrtap, Nodejs } from './technologyIcons'
 
 const Technology = () => {
