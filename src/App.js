@@ -1,4 +1,4 @@
-import Client from "./components/Client";
+// import Client from "./components/Client";
 import Contact from "./components/Contact";
 import Gallery from "./components/Gallery";
 import HasilKarya from "./components/HasilKarya";
@@ -20,7 +20,6 @@ function App() {
     three.classList.toggle('-rotate-[35deg]')
     container.classList.toggle('md:ml-60')
     sidebar.classList.toggle('-ml-60')
-
   }
 
   return (
@@ -37,23 +36,20 @@ function App() {
         <div id="sidebar" className="hidden md:block bg-red-50 border-r-2 border-red-700 fixed left-0 top-[72px] bottom-0 w-60 p-4 transition-all">
           <Sidebar />
         </div>
-        <div className="mt-20 sm:mb-0">
+        <div id="heroku" className="mt-20 sm:mb-0">
           <Heroku />
         </div>
-        <div className="bg-green-50 sm:mt-0 md:mt-4 p-3">
+        <div id="creations" className="bg-green-50 mt-4 pt-3">
           <HasilKarya />
         </div>
-        <div className="mt-4">
+        <div id="technology" className="mt-4 pt-3">
           <Technology />
         </div>
-        <div className="mt-4">
+        <div id="gallery" className="mt-4 pt-3">
           <Gallery />
         </div>
-        <div className="bg-green-50 p-3 mt-4">
-          <Contact />
-        </div>
-        <div className="bg-green-50 pt-2 mt-0 pb-16">
-          <Client />
+        <div id="contact" className="bg-green-50 mt-4 pt-3">
+          <Contact />       
         </div>
         <div className='bg-white fixed bottom-0 right-0 left-0 border-t-2 border-t-green-500 md:hidden'>
           <Navigate />

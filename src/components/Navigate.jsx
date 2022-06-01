@@ -1,4 +1,5 @@
 import {FcHome, FcGallery, FcServices, FcPositiveDynamic, FcSms, FcBusinessman} from 'react-icons/fc'
+import Scroll from '../positioning/index'
 
 const Navigate = () => {
     const setnavMobile = () => {
@@ -17,30 +18,30 @@ const Navigate = () => {
             <span id='second' className='border-2 border-black bg-black font-extrabold inline-block -rotate-45 ml-[2px] transition delay-500 h-4'></span>
         </button>
         <div id='navMobile' className='grid grid-cols-4 gap-2 p-2 h-14 transition-all'>
-            <div className='bg-green-50 rounded-md p-1 '>
+            <a href='#' className='bg-green-50 rounded-md p-1 '>
                 <FcHome className='text-lg mx-auto' />
                 <p className='text-center text-xs'>home</p>
-            </div>
-            <div className='bg-green-50 rounded-md p-1 '>
+            </a>
+            <a onClick={Scroll} href='#creations' className='bg-green-50 rounded-md p-1 '>
                 <FcPositiveDynamic className='text-lg mx-auto' />
-                <p className='text-center text-xs'>karya</p>
-            </div>
-            <div className='bg-green-50 rounded-md p-1 '>
+                <p className='text-center text-xs'>creations</p>
+            </a>
+            <a onClick={Scroll} href='#technology' className='bg-green-50 rounded-md p-1 '>
                 <FcServices className='text-lg mx-auto' />
                 <p className='text-center text-xs'>technology</p>
-            </div>
-            <div className='bg-green-50 rounded-md p-1 '>
+            </a>
+            <a onClick={Scroll} href='#gallery' className='bg-green-50 rounded-md p-1 '>
                 <FcGallery className='text-lg mx-auto' />
                 <p className='text-center text-xs'>gallery</p>
-            </div>
-            <div className='bg-green-50 rounded-md p-1 '>
+            </a>
+            <a onClick={Scroll} href='#contact' className='bg-green-50 rounded-md p-1 '>
                 <FcSms className='text-lg mx-auto' />
                 <p className='text-center text-xs'>contact</p>
-            </div>
-            <div className='bg-green-50 rounded-md p-1 '>
+            </a>
+            <a onClick={Scroll} href='#clients' className='bg-green-50 rounded-md p-1 '>
                 <FcBusinessman className='text-lg mx-auto' />
-                <p className='text-center text-xs'>client</p>
-            </div>
+                <p className='text-center text-xs'>clients</p>
+            </a>
         </div>
     </>
   )
