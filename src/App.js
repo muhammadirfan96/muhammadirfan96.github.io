@@ -39,16 +39,16 @@ function App() {
         <div id="heroku" className="mt-20 sm:mb-0">
           <Heroku />
         </div>
-        <div id="creations" className="bg-green-50 mt-4 pt-3">
+        <div id="creations" className="bg-green-50 mt-4 py-3">
           <HasilKarya />
         </div>
-        <div id="technology" className="mt-4 pt-3">
+        <div id="technology" className="mt-4 py-3">
           <Technology />
         </div>
-        <div id="gallery" className="mt-4 pt-3">
+        <div id="gallery" className="mt-4 py-3">
           <Gallery />
         </div>
-        <div id="contact" className="bg-green-50 mt-4 pt-3">
+        <div id="contact" className="bg-green-50 mt-4 py-3">
           <Contact />       
         </div>
         <div className='bg-white fixed bottom-0 right-0 left-0 border-t-2 border-t-green-500 md:hidden'>

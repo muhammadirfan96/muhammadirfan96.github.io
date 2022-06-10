@@ -10,12 +10,11 @@ export const getClients = async (setClients) => {
     }
 }
 
-export const addClient = async (inputs, setClients) => {
+export const addClient = async (inputs) => {
     try {
-        const res = await axios.post('http://localhost:3003/clients', inputs)
+        await axios.post('http://localhost:3003/clients', inputs)
         console.log('added data successfully')
     } catch (error) {
        console.error(error)
     }
-    // this.getClients(setClients)
 }
