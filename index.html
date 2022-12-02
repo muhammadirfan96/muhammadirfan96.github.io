@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./build.css">
+    <link rel="stylesheet" href="./dist/output.css">
     <title>Document</title>
     <link rel="stylesheet" href="./fonts/andika/stylesheet.css">
     <link rel="stylesheet" href="./fonts/ff-din/black/stylesheet.css">
-    <link rel="stylesheet" href="./bi/bootstrap-icons.css">
 </head>
-<body class="mx-1 font-andika">
+<body class="mx-2 md:mx-1 font-andika">
     <div class='border-b-2 border-green-900 z-10 p-4 bg-green-700 fixed top-0 right-0 left-0'>
         <button onclick="return setSidebar()" class="absolute left-6 top-6 hidden md:inline">
             <div id="one" class="w-8 mb-[5px] border-2 rounded-sm border-black bg-black origin-left rotate-[35deg] transition delay-500"></div>
@@ -43,7 +42,7 @@
             <div class="w-full sm:w-[45%] lg:w-[30%] border-2 border-red-700 bg-green-100 rounded-md p-1 mb-2">
                 <div class="flex justify-between">
                     <div class="w-36 h-24 border border-red-700 rounded-md m-1 bg-center bg-cover" style="background-image: url('./img/hasil-karya/webpunagaya.jpeg');"></div>
-                    <div class="self-center bg-green-50 py-1 px-2 rounded-full">webpunagaya</div>
+                    <a target="_blank" href="https://webpunagaya.com/temp" class="block self-center bg-green-50 py-1 px-2 rounded-full">webpunagaya</a>
                 </div>
                 <div class="border border-red-700 m-1"></div>
                 <div class="h-14 border border-red-700 rounded-sm m-1 p-1 text-[9px] overflow-auto">
@@ -53,7 +52,7 @@
             <div class="w-full sm:w-[45%] lg:w-[30%] border-2 border-red-700 bg-green-100 rounded-md p-1 mb-2">
                 <div class="flex justify-between">
                     <div class="w-36 h-24 border border-red-700 rounded-md m-1 bg-center bg-cover" style="background-image: url('./img/hasil-karya/simokit.jpeg');"></div>
-                    <div class="self-center bg-green-50 py-1 px-2 rounded-full">simokit</div>
+                    <a target="_blank" href="https://webpunagaya.com" class="block self-center bg-green-50 py-1 px-2 rounded-full">simokit</a href="webpunagaya.com">
                 </div>
                 <div class="border border-red-700 m-1"></div>
                 <div class="h-14 border border-red-700 rounded-sm m-1 p-1 text-[9px] overflow-auto">
@@ -63,7 +62,7 @@
             <div class="w-full sm:w-[45%] lg:w-[30%] border-2 border-red-700 bg-green-100 rounded-md p-1 mb-2">
                 <div class="flex justify-between">
                     <div class="w-36 h-24 border border-red-700 rounded-md m-1 bg-center bg-cover" style="background-image: url('./img/hasil-karya/massekolah.jpg');"></div>
-                    <div class="self-center bg-green-50 py-1 px-2 rounded-full">mas sekolah</div>
+                    <a target="_blank" href="#" class="block self-center bg-green-50 py-1 px-2 rounded-full">mas sekolah</a>
                 </div>
                 <div class="border border-red-700 m-1"></div>
                 <div class="h-14 border border-red-700 rounded-sm m-1 p-1 text-[9px] overflow-auto">
@@ -110,7 +109,7 @@
     <div id="contact" class="mt-4 py-3 mb-3">
         <p class='text-center text-3xl capitalize mb-2 font-din'>contact</p>
         <div class="flex flex-wrap justify-center gap-4">
-            <a href="https://wa.me/+6282302173682?text=halo,%20selamat%20datang" target="_blank" class="flex justify-center w-14 h-14 md:w-20 md:h-20 p-2 rounded-full border-2 border-green-500">
+            <a href="https://wa.me/+6282302173682?text=halo%20muhammad%20irfan,%20saya%20telah%20membaca portofolio%20anda" target="_blank" class="flex justify-center w-14 h-14 md:w-20 md:h-20 p-2 rounded-full border-2 border-green-500">
                 <i class="bi-whatsapp text-2xl md:text-4xl text-green-500 self-center"></i>
             </a>
             <a href='https://twitter.com/irfan28063856' target="_blank" class="flex justify-center w-14 h-14 md:w-20 md:h-20 p-2 rounded-full border-2 border-blue-400">
@@ -162,25 +161,34 @@
 
     <div id="sidebar" class="hidden md:block bg-red-50 border-red-700 border-r-2 fixed left-0 top-[72px] bottom-0 w-60 p-4 transition-all">
         <a href="#" onclick="return Scroll()" class='flex hover:bg-green-50 rounded-md mb-1 h-8 p-2'>
-            <p class='text-lg inline self-center ml-2'><i class="mr-2 bi bi-speedometer"></i>dashboard</p>
+            <p class='text-lg inline self-center ml-2'>
+                <img src="./icons/speedometer.svg" class="w-5 inline mr-2">dashboard
+            </p>
         </a>
         <a href="#creations" onclick="return Scroll()" class='flex hover:bg-green-50 rounded-md mb-1 h-8 p-2'>
-            <p class='text-lg inline self-center ml-2'><i class="mr-2 bi-tools"></i>creations</p>
+            <p class='text-lg inline self-center ml-2'>
+                <img src="./icons/tools.svg" class="w-5 inline mr-2">creations
+            </p>
         </a>
         <a href="#technology" onclick="return Scroll()" class='flex hover:bg-green-50 rounded-md mb-1 h-8 p-2'>
-            <p class='text-lg inline self-center ml-2'><i class="mr-2 bi-gear-wide-connected"></i>technology</p>
+            <p class='text-lg inline self-center ml-2'>
+                <img src="./icons/gear.svg" class="w-5 inline mr-2">technology
+            </p>
         </a>
         <a href="#gallery" onclick="return Scroll()" class='flex hover:bg-green-50 rounded-md mb-1 h-8 p-2'>
-            <i class="fas fa-pen"></i>
-            <p class='text-lg inline self-center ml-2'><i class="mr-2 bi-image"></i>gallery</p>
+            <p class='text-lg inline self-center ml-2'>
+                <img src="./icons/images.svg" class="w-5 inline mr-2">gallery
+            </p>
         </a>
         <a href="#contact" onclick="return Scroll()" class='flex hover:bg-green-50 rounded-md mb-1 h-8 p-2'>
-            <i class="fas fa-desktop"></i>
-            <p class='text-lg inline self-center ml-2'><i class="mr-2 bi-person-lines-fill"></i>contact</p>
+            <p class='text-lg inline self-center ml-2'>
+                <img src="./icons/address-card-regular.svg" class="w-5 inline mr-2">contact
+            </p>
         </a>
         <a href="#clients" onclick="return Scroll()" class='flex hover:bg-green-50 rounded-md mb-1 h-8 p-2'>
-            <i class="fas fa-pen"></i>
-            <p class='text-lg inline self-center ml-2'><i class="mr-2 bi-briefcase-fill"></i>clients</p>
+            <p class='text-lg inline self-center ml-2'>
+                <img src="./icons/briefcase.svg" class="w-5 inline mr-2">clients
+            </p>
         </a>
     </div>
 
@@ -188,34 +196,34 @@
 
     <!-- start nav mobile -->
 
-    <div class='bg-white fixed bottom-0 right-0 left-0  border-t-2 border-t-green-700 md:hidden'>
+    <div id='navMobile' class='bg-white fixed bottom-0 right-0 left-0 border-t-2 border-t-green-700 -mb-28 md:hidden'>
         <button onclick="return setNavMobile()" class='absolute right-0 -top-[28px] bg-green-700 pt-1 px-3 rounded-tl-lg'>
             <span id='first' class='border-2 rounded-sm border-white bg-white font-extrabold inline-block rotate-45 transition delay-500 h-4'></span>
             <span id='second' class='border-2 rounded-sm border-black bg-black font-extrabold inline-block -rotate-45 transition delay-500 h-4'></span>
         </button>
-        <div id='navMobile' class='grid grid-cols-4 gap-2 p-2 -mb-20 transition-all'>
-            <a href="#" class='bg-green-50 rounded-md p-1 text-center'>
-                <i class="fas fa-desktop"></i>
-                <p class='text-xs'>home</p>
+        <div class='grid grid-cols-4 gap-2 p-2 transition-all text-center'>
+            <a href="#" class='bg-green-50 rounded-md p-1'>
+                <img src="./icons/speedometer.svg" class="w-5 mx-auto">
+                <p class='text-xs block'>home</p>
             </a>
-            <a onclick="return Scroll()" href="#creations" class='bg-green-50 rounded-md p-1 text-center'>
-                <i class="fas fa-pen"></i>
+            <a onclick="return Scroll()" href="#creations" class='bg-green-50 rounded-md p-1'>
+                <img src="./icons/tools.svg" class="w-5 mx-auto">
                 <p class='text-xs'>creations</p>
             </a>
-            <a onclick="return Scroll()" href="#technology" class='bg-green-50 rounded-md p-1 text-center'>
-                <i class="fas fa-pen"></i>
+            <a onclick="return Scroll()" href="#technology" class='bg-green-50 rounded-md p-1'>
+                <img src="./icons/gear.svg" class="w-5 mx-auto">
                 <p class='text-xs'>technology</p>
             </a>
-            <a onclick="return Scroll()" href="#gallery" class='bg-green-50 rounded-md p-1 text-center'>
-                <i class="fas fa-pen"></i>
+            <a onclick="return Scroll()" href="#gallery" class='bg-green-50 rounded-md p-1'>
+                <img src="./icons/images.svg" class="w-5 mx-auto">
                 <p class='text-xs'>gallery</p>
             </a>
-            <a onclick="return Scroll()" href="#contact" class='bg-green-50 rounded-md p-1 text-center'>
-                <i class="fas fa-pen"></i>
+            <a onclick="return Scroll()" href="#contact" class='bg-green-50 rounded-md p-1'>
+                <img src="./icons/address-card-regular.svg" class="w-5 mx-auto">
                 <p class='text-xs'>contact</p>
             </a>
-            <a onclick="return Scroll()" href="#clients" class='bg-green-50 rounded-md p-1 text-center'>
-                <i class="fas fa-pen"></i>
+            <a onclick="return Scroll()" href="#clients" class='bg-green-50 rounded-md p-1'>
+                <img src="./icons/briefcase.svg" class="w-5 mx-auto">
                 <p class='text-xs'>clients</p>
             </a>
         </div>
@@ -230,7 +238,7 @@
             const navMobile = document.querySelector('#navMobile')
             const first = document.querySelector('#first')
             const second = document.querySelector('#second')
-            navMobile.classList.toggle('-mb-20')
+            navMobile.classList.toggle('-mb-28')
             first.classList.toggle('translate-x-2')
             second.classList.toggle('-translate-x-2')
         }
