@@ -1,9 +1,7 @@
 import "./output.css";
 import Home from "./page/Home";
 import MobileNav from "./component/MobileNav";
-import "@fontsource/andika"; // Defaults to weight 400
-import "@fontsource/andika/400.css"; // Specify weight
-import "@fontsource/andika/400-italic.css"; // Specify weight and style
+import "@fontsource/andika";
 import DesktopNav from "./component/DesktopNav";
 import { useState } from "react";
 

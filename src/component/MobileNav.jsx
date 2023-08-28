@@ -1,6 +1,6 @@
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { useState } from "react";
-import ListMenu from "./data/ListMenu";
+import ListMenu from "../data/ListMenu";
 
 const MobileNav = () => {
   const [open, close] = useState(false);

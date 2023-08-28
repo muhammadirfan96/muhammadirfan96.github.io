@@ -3,7 +3,7 @@ const Logo = (props) => {
     <>
       <div
         id={props.head}
-        className="w-[95%] text-center mx-auto rounded-sm text-sm mb-4"
+        className="w-[95%] lg:w-[80%] text-center mx-auto rounded-sm text-sm mb-4"
       >
         <p className="text-white text-center p-2 text-base">{props.head}</p>
         <div

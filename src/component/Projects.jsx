@@ -1,8 +1,8 @@
 import Card from "./Card";
-import mysid from "/mysid.png";
-import simokit from "/simokit.png";
-import webpunagaya from "/webpunagaya.png";
-import massekolah from "/massekolah.png";
+import mysid from "/img/mysid.png";
+import simokit from "/img/simokit.png";
+import webpunagaya from "/img/webpunagaya.png";
+import massekolah from "/img/massekolah.png";
 
 const Projects = () => {
   const data = [

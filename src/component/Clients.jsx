@@ -1,6 +1,6 @@
 import Logo from "./Logo";
-import pln from "/pln.png";
-import latompa from "/latompa.png";
+import pln from "/img/pln.png";
+import latompa from "/img/latompa.png";
 
 const Clients = () => {
   const data = [

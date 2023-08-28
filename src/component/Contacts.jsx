@@ -1,8 +1,8 @@
 import Logo from "./Logo";
-import wa from "/wa.png";
-import ig from "/ig.png";
-import fb from "/fb.png";
-import github from "/github.png";
+import wa from "/img/wa.png";
+import ig from "/img/ig.png";
+import fb from "/img/fb.png";
+import github from "/img/github.png";
 
 const Contacts = () => {
   const data = [

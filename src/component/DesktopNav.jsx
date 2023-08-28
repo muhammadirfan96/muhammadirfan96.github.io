@@ -1,6 +1,5 @@
 import "bootstrap-icons/font/bootstrap-icons.css";
-import { useState } from "react";
-import ListMenu from "./data/ListMenu";
+import ListMenu from "../data/ListMenu";
 
 const DesktopNav = (props) => {
   const Scroll = () => {
