@@ -1,4 +1,5 @@
-import "./output.css";
+// import "./output.css";
+import "./build.css";
 import Home from "./page/Home";
 import MobileNav from "./component/MobileNav";
 import "@fontsource/andika";
