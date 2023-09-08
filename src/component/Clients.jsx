@@ -10,7 +10,12 @@ const Clients = () => {
 
   return (
     <>
-      <Logo head="clients" tw="justify-center" state={data} />
+      <Logo
+        head="clients"
+        tw_position="justify-center"
+        tw_content_width=""
+        state={data}
+      />
     </>
   );
 };

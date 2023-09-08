@@ -45,6 +45,10 @@ function App() {
           </p>
         </div>
 
+        <button className="text-white text-xs hover:text-greenLight fixed top-2 right-2 border hover:border-greenLight rounded-md p-1  z-10">
+          <i className="bi-download"></i> pdf
+        </button>
+
         <Home />
         <DesktopNav status={open ? "-ml-60" : null} />
         <MobileNav />

@@ -5,17 +5,17 @@ export default function ExportToXls(props) {
     const ws = utils.json_to_sheet(props.persons);
     const wb = utils.book_new();
     utils.book_append_sheet(wb, ws, "sheet1");
-    writeFileXLSX(wb, "persons.xlsx");
+    writeFileXLSX(wb, "comments.xlsx");
   };
 
   return (
     <>
       <button
         onClick={exportFile}
-        className="text-white hover:text-greenLight p-2 text-sm shadow-md shadow-white hover:shadow-greenLight rounded-md m-2"
+        className="text-white hover:text-greenLight text-xs hover:shadow-greenLight m-2 border hover:border-greenLight p-1 rounded-md"
         type="button"
       >
-        export to xls
+        <i className="bi-table"></i> xls
       </button>
     </>
   );

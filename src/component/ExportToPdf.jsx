@@ -21,8 +21,7 @@ const ExportToPdf = (props) => {
             <tr style={{ borderBottom: "2 solid black", padding: "3" }}>
               <th>photo</th>
               <th>name</th>
-              <th>email</th>
-              <th>birthday</th>
+              <th>coment</th>
             </tr>
           </thead>
           <tbody>
@@ -43,8 +42,7 @@ const ExportToPdf = (props) => {
                   />
                 </td>
                 <td>{data.name}</td>
-                <td>{data.email}</td>
-                <td>{data.birthday}</td>
+                <td>{data.coment}</td>
               </tr>
             ))}
           </tbody>

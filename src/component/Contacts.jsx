@@ -26,7 +26,12 @@ const Contacts = () => {
 
   return (
     <>
-      <Logo head="contacts" tw="justify-center" state={data} />
+      <Logo
+        head="contacts"
+        tw_position="justify-center"
+        tw_content_width=""
+        state={data}
+      />
     </>
   );
 };

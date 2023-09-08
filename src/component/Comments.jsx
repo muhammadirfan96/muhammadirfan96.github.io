@@ -9,7 +9,8 @@ import axios from "axios";
 import ExportToXls from "./ExportToXls";
 import ExportToPdf from "./ExportToPdf";
 
-const Try = () => {
+const Comments = () => {
+  // const api = "http://localhost:8080/persons";
   const api = "https://server.webpunagaya.com/persons";
   const [persons, setPersons] = useState([]);
 
@@ -23,16 +24,14 @@ const Try = () => {
   const [submit, setSubmit] = useState(true);
   const [idUpdate, setIdUpdate] = useState(0);
   const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [birthday, setBirthday] = useState("");
+  const [coment, setComent] = useState("");
   const [photo, setPhoto] = useState("");
   const [previewPhoto, setPreviewPhoto] = useState("");
   const [errMsg, setErrMsg] = useState("");
 
   const toggleModal = () => {
     setName("");
-    setEmail("");
-    setBirthday("");
+    setComent("");
     setPhoto("");
     setPreviewPhoto("");
     setErrMsg("");
@@ -48,16 +47,28 @@ const Try = () => {
     toggleModal();
     const find = await axios.get(`${api}/${id}`);
     setName(find.data.name);
-    setEmail(find.data.email);
-    setBirthday(find.data.birthday);
+    setComent(find.data.coment);
     setPreviewPhoto(find.data.photo);
     setSubmit(false);
     setIdUpdate(id);
   };
 
+  const handleOffset = (index, limit) => {
+    setCrrPage(index + 1);
+    setOffset(limit * (index + 1) - limit);
+  };
+
+  const handleLimit = (limit) => {
+    setLimit(limit);
+  };
+
+  const handleSeacrh = (key) => {
+    setKeyPencarian(key);
+  };
+
   useEffect(() => {
     getPersons();
-  }, []);
+  }, [keyPencarian, limit, offset]);
 
   const pageButton = () => {
     const button = [];
@@ -68,11 +79,7 @@ const Try = () => {
           className={`${
             crrPage == index + 1 ? "bg-greenLight" : "bg-white"
           } px-1 m-1 rounded-sm text-center text-green-950`}
-          onFocus={() => {
-            setCrrPage(index + 1);
-            setOffset(limit * (index + 1) - limit);
-          }}
-          onClick={getPersons}
+          onClick={() => handleOffset(index, limit)}
           type="button"
         >
           {index + 1}
@@ -110,8 +117,7 @@ const Try = () => {
     event.preventDefault();
     const formData = new FormData();
     formData.append("name", name);
-    formData.append("email", email);
-    formData.append("birthday", birthday);
+    formData.append("coment", coment);
     formData.append("photo", photo);
     try {
       const response = await axios.post(`${api}`, formData);
@@ -129,8 +135,7 @@ const Try = () => {
     event.preventDefault();
     const formData = new FormData();
     formData.append("name", name);
-    formData.append("email", email);
-    formData.append("birthday", birthday);
+    formData.append("coment", coment);
     formData.append("photo", photo);
     formData.append("_method", "PATCH");
     try {
@@ -153,10 +158,10 @@ const Try = () => {
   return (
     <>
       <div
-        id="try"
-        className="w-[95%] md:w-[80%] lg:w-[60%] text-center mx-auto shadow-md shadow-white rounded-md text-sm mt-8 mb-4 pt-1 pb-4"
+        id="comments"
+        className="w-[95%] md:w-[80%] lg:w-[60%] text-center mx-auto shadow-md shadow-white rounded-md text-sm mt-8 mb-4 pt-1 pb-4 relative"
       >
-        <p className="text-white text-center p-2 text-base">let's try</p>
+        <p className="text-white text-center p-2 text-base">comments</p>
 
         <div className="flex flex-wrap justify-evenly">
           <div className="w-[42%] md:w-[23%] shadow-md shadow-white rounded-md m-2 text-white hover:shadow-greenLight hover:text-greenLight">
@@ -172,8 +177,7 @@ const Try = () => {
           <div className="w-[42%] md:w-[23%] shadow-md shadow-white rounded-md m-2 text-white hover:shadow-greenLight hover:text-greenLight">
             <input
               className="p-2 outline-none w-full bg-green-950 rounded-md"
-              onChange={(e) => setKeyPencarian(e.target.value)}
-              onKeyUp={getPersons}
+              onChange={(e) => handleSeacrh(e.target.value)}
               type="text"
               value={keyPencarian}
               placeholder="name@..."
@@ -186,8 +190,7 @@ const Try = () => {
             <select
               className="outline-none bg-green-950"
               value={limit}
-              onChange={(e) => setLimit(e.target.value)}
-              onClick={getPersons}
+              onChange={(e) => handleLimit(e.target.value)}
             >
               <option value="2">2</option>
               <option value="4">4</option>
@@ -202,31 +205,20 @@ const Try = () => {
           </div>
         </div>
 
-        <div className="overflow-x-auto p-2 mx-2 mb-2">
-          <table cellPadding="5" className="text-white w-full">
-            <thead className="border-b-2 border-white">
-              <tr>
-                <th>photo</th>
-                <th>name</th>
-                <th>email</th>
-                <th>birthday</th>
-                <th>actions</th>
-              </tr>
-            </thead>
-            <tbody className="font-light">
-              {persons.map((data) => (
-                <tr key={data.id} className="border-b border-white">
-                  <td>
-                    <img
-                      className="w-10 h-10 border border-white rounded-full mx-auto"
-                      src={data.photo}
-                      alt={data.photo}
-                    />
-                  </td>
-                  <td>{data.name}</td>
-                  <td>{data.email}</td>
-                  <td>{data.birthday}</td>
-                  <td>
+        <div className="p-2 mx-2">
+          {persons.map((data, index) => (
+            <div key={index} className="flex gap-2 text-white mb-4">
+              <div className="w-[12%]">
+                <img
+                  className="w-12 h-12 border border-white rounded-full"
+                  src={data.photo}
+                  alt={data.photo}
+                />
+              </div>
+              <div className="w-[86%]">
+                <div className="flex justify-between border-b mb-2 p-1">
+                  <p>{data.name}</p>
+                  <div>
                     <button
                       onClick={() =>
                         questionAlert(
@@ -250,14 +242,16 @@ const Try = () => {
                     >
                       <i className="bi-pen"></i>
                     </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+                  </div>
+                </div>
+                <p className="italic text-left text-xs">{data.coment}</p>
+              </div>
+            </div>
+          ))}
         </div>
-        <ExportToXls persons={persons} />
-        <ExportToPdf persons={persons} />
+        <div className="absolute right-0 bottom-0">
+          <ExportToXls persons={persons} />
+        </div>
       </div>
 
       {/* modal tambah dan update */}
@@ -274,7 +268,7 @@ const Try = () => {
           >
             <i className="bi-x-square-fill text-red-700 rounded-md text-xl"></i>
           </button>
-          <p className="text-center font-medium text-lg">header modal</p>
+          <p className="text-center font-medium text-lg">coments</p>
           {errMsg ? (
             <div className="bg-red-50 rounded-md p-1 my-1 text-xs italic text-red-700 border border-red-900">
               {Object.keys(errMsg).map((msg, i) => (
@@ -295,27 +289,18 @@ const Try = () => {
           >
             <input
               className="w-full p-1 mb-2 outline-none border border-green-950 rounded-md"
-              placeholder="input name"
+              placeholder="your name..."
               type="text"
               autoComplete="off"
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
-            <input
+            <textarea
               className="w-full p-1 mb-2 outline-none border border-green-950 rounded-md"
-              placeholder="input email"
-              type="text"
+              placeholder="coment..."
               autoComplete="off"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <input
-              className="w-full p-1 mb-2 outline-none border border-green-950 rounded-md"
-              placeholder="input birthday"
-              type="date"
-              autoComplete="off"
-              value={birthday}
-              onChange={(e) => setBirthday(e.target.value)}
+              value={coment}
+              onChange={(e) => setComent(e.target.value)}
             />
             <div className="flex flex-wrap my-2">
               <div>
@@ -338,7 +323,7 @@ const Try = () => {
               className="bg-green-950 text-lg text-white font-medium py-1 rounded-md w-full"
               type="submit"
             >
-              submit
+              {submit ? "submit" : "save change"}
             </button>
           </form>
         </div>
@@ -347,4 +332,4 @@ const Try = () => {
   );
 };
 
-export default Try;
+export default Comments;

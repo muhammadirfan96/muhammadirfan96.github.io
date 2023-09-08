@@ -40,7 +40,12 @@ const Technologies = () => {
 
   return (
     <>
-      <Logo head="technologies" tw="justify-left" state={data} />
+      <Logo
+        head="technologies"
+        tw_position="justify-left"
+        tw_content_width=""
+        state={data}
+      />
     </>
   );
 };
