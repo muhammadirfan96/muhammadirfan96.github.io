@@ -1,6 +1,11 @@
-import "bootstrap-icons/font/bootstrap-icons.css";
 import { useState } from "react";
-import ListMenu from "../data/ListMenu";
+
+import {
+  BsMotherboard,
+  BsWindowDock,
+  BsHouse,
+  BsTelephone,
+} from "react-icons/bs";
 
 const MobileNav = () => {
   const [open, close] = useState(false);
@@ -13,6 +18,25 @@ const MobileNav = () => {
       window.scrollBy(0, -72);
     }, 1000);
   };
+
+  const data = [
+    {
+      icon: <BsHouse className="mx-auto" />,
+      url: "#home",
+    },
+    {
+      icon: <BsMotherboard className="mx-auto" />,
+      url: "#ability",
+    },
+    {
+      icon: <BsWindowDock className="mx-auto" />,
+      url: "#project",
+    },
+    {
+      icon: <BsTelephone className="mx-auto" />,
+      url: "#contact",
+    },
+  ];
 
   return (
     <>
@@ -37,15 +61,14 @@ const MobileNav = () => {
             }`}
           ></span>
         </button>
-
-        {ListMenu.map((menu) => (
+        {data.map((prop, index) => (
           <a
+            key={index}
+            href={prop.url}
             onClick={Scroll}
-            key={menu.url}
-            href={menu.url}
-            className="p-2 w-10 h-10 text-center rounded-md shadow-md shadow-white hover:shadow-greenLight hover:text-greenLight"
+            className="flex items-center p-2 w-10 h-10 rounded-md shadow-md shadow-white hover:shadow-greenLight hover:text-greenLight"
           >
-            <i className={menu.icon}></i>
+            {prop.icon}
           </a>
         ))}
       </div>
